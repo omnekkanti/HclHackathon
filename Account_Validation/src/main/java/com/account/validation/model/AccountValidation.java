@@ -23,7 +23,7 @@ public class AccountValidation {
 	private String creditorAgentIdentifier;
 	private String paymentCurrency;
 	private int paymentAmount;
-	private Date valueDate;
+	private String valueDate;
 	private String remittanceinfo;
 	public String getMessageId() {
 		return messageId;
@@ -97,10 +97,10 @@ public class AccountValidation {
 	public void setPaymentAmount(int paymentAmount) {
 		this.paymentAmount = paymentAmount;
 	}
-	public Date getValueDate() {
+	public String getValueDate() {
 		return valueDate;
 	}
-	public void setValueDate(Date valueDate) {
+	public void setValueDate(String valueDate) {
 		this.valueDate = valueDate;
 	}
 	public String getRemittanceinfo() {
