@@ -2,15 +2,21 @@ package com.account.validation.model;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name="Accounts")
 public class AccountValidation {
 	
 	private String messageId;
 	private String endToEndID;
-	private  int debtorAccountNumber;
+	@Id
+	private  String debtorAccountNumber;
 	private String debtorAccountName;
 	private String debtorAddress;
-	private int creditorAccountNumber;
+	private String creditorAccountNumber;
 	private String creditorAccountName;
 	private String creditorAddress;
 	private String debitorAgentIdentifier;
@@ -31,10 +37,10 @@ public class AccountValidation {
 	public void setEndToEndID(String endToEndID) {
 		this.endToEndID = endToEndID;
 	}
-	public int getDebtorAccountNumber() {
+	public String getDebtorAccountNumber() {
 		return debtorAccountNumber;
 	}
-	public void setDebtorAccountNumber(int debtorAccountNumber) {
+	public void setDebtorAccountNumber(String debtorAccountNumber) {
 		this.debtorAccountNumber = debtorAccountNumber;
 	}
 	public String getDebtorAccountName() {
@@ -49,10 +55,10 @@ public class AccountValidation {
 	public void setDebtorAddress(String debtorAddress) {
 		this.debtorAddress = debtorAddress;
 	}
-	public int getCreditorAccountNumber() {
+	public String getCreditorAccountNumber() {
 		return creditorAccountNumber;
 	}
-	public void setCreditorAccountNumber(int creditorAccountNumber) {
+	public void setCreditorAccountNumber(String creditorAccountNumber) {
 		this.creditorAccountNumber = creditorAccountNumber;
 	}
 	public String getCreditorAccountName() {
